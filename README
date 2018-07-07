@@ -1,0 +1,9 @@
+LABEL gentoo-custom
+MENU LABEL gentoo-custom
+kernel http://172.16.254.10:81/pxe/images/custom_gentoo/gentoo
+append initrd=http://172.16.254.10:81/pxe/images/custom_gentoo/initramfs.gz root=/dev/ram0 init=/linuxrc loop=/image.squashfs looptype=squashfs cdroot=0 real_root=/dev/ram0
+
+#-------------------
+
+linux  /custom_gentoo/gentoo
+append /custom_gentoo/initramfs.gz root=/dev/ram0 init=/linuxrc loop=/image.squashfs looptype=squashfs cdroot=0 real_root=/dev/ram0
